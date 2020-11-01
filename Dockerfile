@@ -88,6 +88,10 @@ RUN apt-get update -qq > /dev/null && \
         | tee /etc/apt/sources.list.d/yarn.list > /dev/null && \
     apt-get update -qq > /dev/null && \
     apt-get install -qq yarn > /dev/null && \
+    apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 bash python python-pip \
+    pip install firebase-admin \
+    pip install google-cloud-storage \
+    pip install google-cloud-firestore \
     rm -rf /var/lib/apt/lists/ && \
     npm install --quiet -g npm > /dev/null && \
     npm install --quiet -g \
