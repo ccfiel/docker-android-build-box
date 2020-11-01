@@ -188,6 +188,9 @@ RUN echo "fastlane" && \
     chmod 777 /.fastlane && \
     bundle install --quiet
 
+RUN apt-get --quiet install --yes software-properties-common
+RUN apt-add-repository universe
+RUN apt-get --quiet update --yes
 RUN apt-get --quiet install --yes wget tar unzip bash python python-pip git
 
 RUN pip install firebase-admin
