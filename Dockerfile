@@ -188,7 +188,7 @@ RUN echo "fastlane" && \
     chmod 777 /.fastlane && \
     bundle install --quiet
 
-RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 bash python python-pip git-all
+RUN apt-get --quiet install --yes wget tar unzip bash python python-pip git
 
 RUN pip install firebase-admin
 RUN pip install google-cloud-storage
